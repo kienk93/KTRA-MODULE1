@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3</title>
+</head>
+<body>
+
+
+
+
+
+<script>
+    // Bài 3
+    function isFibonacci (n) {
+        if (n < 0) {
+            return false
+        }
+        else if ((n == 0) || (n == 1)) {
+            return true;
+        }
+        else {
+            let arr = [0, 1, 1];
+            let total = 1;
+            let i = 2;
+            //Tạo các số fibonacci vào mảng
+            while (total < n) {
+                total = arr[i] + arr[i-1];
+                i++;
+                arr[i] = total;
+            }
+            //check true false
+            if (arr.indexOf(n) !== -1) {
+                return true;
+            }
+            else return false;
+        }
+    }
+    console.log('0 : ' + isFibonacci(0))
+    console.log('5 : ' + isFibonacci(5))
+    console.log('15 : ' + isFibonacci(15))
+    console.log('32 : ' + isFibonacci(32))
+    console.log('144 : ' + isFibonacci(144))
+</script>
+</body>
+</html>

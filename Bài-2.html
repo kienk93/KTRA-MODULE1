@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+</head>
+<body>
+
+
+
+
+<script>
+    // Bài 2
+    var arraySoNguyen = [7,2,3,4,6,7,1,4,6,5,8,9,7,1,2]
+    var timSoNguyenX = []
+    timSoNguyenX.push(parseInt(prompt('nhập số nguyên X bất kì')))
+    if (arraySoNguyen.length == 0) {
+        alert('Mảnh không có số nguyên nên không thể trả về')
+    } else {
+        document.write('Trả về mảng không có số X bất kì : ' + tryRemoveFormArray(arraySoNguyen));
+    }
+
+    function tryRemoveFormArray(array) {
+        for (let i=0;i<array.length;i++) {
+            if(timSoNguyenX[0] == array[i]) {
+                array.splice(i,1);
+            }
+        }
+        return array;
+    }
+</script>
+</body>
+</html>

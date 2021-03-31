@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 1</title>
+</head>
+<body>
+
+</body>
+<script>
+    // Bài 1
+    var arrayDiemThi = [8,7,6,9,2,6,9,10,6,8,6]
+    if(arrayDiemThi.length == 0) {
+        alert('không có mảnh danh sách điểm thi')
+    } else {
+        document.write('Điểm thi cao nhất : ' + findMax(arrayDiemThi))
+    }
+    function findMax(array) {
+        max = array[0];
+        for (let i=0;i<array.length;i++) {
+
+            if(array[i] > max) {
+                max = array[i];
+            }
+
+        }
+        return max;
+    }
+</script>
+</html>
